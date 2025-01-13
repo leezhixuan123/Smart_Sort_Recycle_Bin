@@ -146,21 +146,21 @@ def capture_and_classify_object(current_time):
     # Control servo based on classification result
     if classification_result == "paper":
         print("Moving servo to position for paper")
-        set_servo_angle(0)  
+        set_servo_angle(157.5)  
     elif classification_result == "glass":
         print("Moving servo to position for glass")
-        set_servo_angle(60)  
+        set_servo_angle(112.5)  
     elif classification_result == "plasticMetal":
         print("Moving servo to position for plastic/metal")
-        set_servo_angle(120)  
+        set_servo_angle(67.5)  
     else:  # Assume trash
         print("Moving servo to position for trash")
-        set_servo_angle(180) 
+        set_servo_angle(22.5) 
 
     last_capture_time = current_time
 
 # Component state Initialisation
-set_servo_angle(0)
+set_servo_angle(180)
 GPIO.output(RED_LED_PIN, GPIO.LOW)
 GPIO.output(GREEN_LED_PIN, GPIO.HIGH)
 
